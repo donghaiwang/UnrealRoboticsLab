@@ -19,15 +19,17 @@ if (Test-Path "build.ps1") {
 }
 Pop-Location
 
-# 2. MuJoCo
-Write-Host "`n--- Building MuJoCo ---" -ForegroundColor Yellow
-Push-Location MuJoCo
-if (Test-Path "build.ps1") {
-    .\build.ps1 -InstallDir $InstallDir -BuildType $BuildType
-} else {
-    Write-Warning "MuJoCo/build.ps1 not found!"
-}
-Pop-Location
+
+# # 2. MuJoCo
+# Write-Host "`n--- Building MuJoCo ---" -ForegroundColor Yellow
+# Push-Location MuJoCo
+# if (Test-Path "build.ps1") {
+#     .\build.ps1 -InstallDir $InstallDir -BuildType $BuildType
+# } else {
+#     Write-Warning "MuJoCo/build.ps1 not found!"
+# }
+# Pop-Location
+
 
 # 3. libzmq
 Write-Host "`n--- Building libzmq ---" -ForegroundColor Yellow
